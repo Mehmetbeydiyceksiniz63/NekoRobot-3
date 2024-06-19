@@ -120,58 +120,59 @@ NEKO_STICKERS = (
 )
 
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/9996ec2eafdef4692102d.jpg) 」────
-*Hola! {},*
-*Meow Meow, Don't Touch Me Without My Permission!*
+────「 [{}](https://telegra.ph/Seni-06-19) 」────
+*merhaba! {},*
+*Miyav Miyav, İznim Olmadan Bana Dokunma!*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ *Uptime:* `{}`
-❍ `{}` *Users, Across* `{}` *Chats.*
+❍ *zamanlama:* `{}`
+❍ `{}` *Kullanıcılar, Acros* `{}` *grup.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Guidelines Button Below To Know My Abilities ××
+komutlarımı tıklayıp benim özelliklerimi gör ××
+https://t.me/masaldestekkanal
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add {BOT_NAME} To Your Group",
+            text=f"ekle {BOT_NAME} beni grubuna ",
             url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
         )
     ],
     [
-        InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
+        InlineKeyboardButton(text="🥀yardım & komutları🥀", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Source 🌐", url="https://github.com/Awesome-Prince/NekoRobot-3.git"
+            text="🎧müzik bot🎧", url="@kumsalmuzikbot"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+            text="🥀destek grubu🥀", url=f"https://telegram.dog/{SUPPORT_CHAT}"
         ),
         InlineKeyboardButton(
-            text="📢 Updates", url="https://telegram.dog/Programmer_Updates"
+            text="🥀duyuru kanalı🥀", url="https://t.me/masaldestekkanal"
         ),
     ],
 ]
 
 HELP_STRINGS = """
-*Main* commands available:
-➛ /help: PM's you this message.
-➛ /help <module name>: PM's you info about that module.
-➛ /donate: information on how to donate!
-➛ /settings:
-   ➛ in PM: will send you your settings for all supported modules.
-   ➛ in a group: will redirect you to pm, with all that chat's settings.
+*Ana* komutlar mevcut:
+ ➛ /help: Bu mesajı PM olarak gönderdim.
+ ➛ /help : PM size o modül hakkında bilgi verir.
+ ➛ /donate: nasıl bağış yapılacağına dair bilgi!
+ ➛ /ayarlar:
+    ➛ PM'de: desteklenen tüm modüller için ayarlarınızı size gönderecektir.
+    ➛ bir grupta: sizi tüm sohbet ayarlarının bulunduğu özel mesaja yönlendirecektir.
 """
 
 GROUP_START_IMG = (
-    "https://te.legra.ph/file/5f272dc498e4cf91faf92.jpg",
-    "https://te.legra.ph/file/9d8190aba9ac3421af488.jpg",
-    "https://te.legra.ph/file/5b1ce336f0c0216224040.jpg",
-    "https://te.legra.ph/file/f1f67047d973f3aea4004.jpg",
-    "https://te.legra.ph/file/c2526c05d65fd2fbfa58b.jpg",
+    "https://telegra.ph/Seni-06-19",
+    "https://telegra.ph/Vuh-06-19",
+    "https://telegra.ph/Ndnd-06-19",
+    "https://telegra.ph/Kolay-06-19",
+    "https://telegra.ph/Slm-06-19",
 )
 
-DONATE_STRING = """❂ I'm Free for Everyone ❂"""
+DONATE_STRING = """❂ herşey için üzgünüm  ❂"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -262,7 +263,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="[► Back ◄]", callback_data="help_back"
+                                    text="[► geri ◄]", callback_data="help_back"
                                 )
                             ]
                         ]
@@ -308,12 +309,12 @@ def start(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🚑 Support",
+                            text=" 🥀destek grubu🥀",
                             url=f"https://telegram.dog/{SUPPORT_CHAT}",
                         ),
                         InlineKeyboardButton(
-                            text="📢 Updates",
-                            url="https://telegram.dog/Programmer_Updates",
+                            text="🥀duyuru kanalı🥀",
+                            url="https://t.me/masaldestekkanal",
                         ),
                     ]
                 ]
@@ -386,10 +387,10 @@ def help_button(update: Update, context: CallbackContext) -> None:
                     [
                         [
                             InlineKeyboardButton(
-                                text="[► Back ◄]", callback_data="help_back"
+                                text="[► geri ◄]", callback_data="help_back"
                             ),
                             InlineKeyboardButton(
-                                text="[► Support ◄]", url=f"https://t.me/{SUPPORT_CHAT}"
+                                text="[► 🥀destek grubu🥀 ◄]", url=f"https://t.me/{SUPPORT_CHAT}"
                             ),
                         ]
                     ]
@@ -439,7 +440,7 @@ def neko_callback_data(update: Update, context: CallbackContext) -> None:
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="[► Back ◄]", callback_data="neko_back")]]
+                [[InlineKeyboardButton(text="[► geri ◄]", callback_data="neko_back")]]
             ),
         )
     elif query.data == "neko_back":
@@ -490,7 +491,7 @@ def get_help(update: Update, context: CallbackContext) -> None:
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="[► geri ◄]", callback_data="help_back")]]
             ),
         )
 
@@ -671,17 +672,17 @@ def donate(update: Update, context: CallbackContext) -> None:
             )
 
             update.effective_message.reply_text(
-                text="I'm free for everyone❤️\njust donate by subs channel, Don't forget to join the support group.",
+                text="Herkes için özgürüm❤️\nsadece abone kanalınızdan bağış yapın, destek grubuna katılmayı unutmayın.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="📢 Updates",
-                                url="https://telegram.dog/Programmer_Updates",
+                                text="🥀duyuru kanalı🥀",
+                                url="https://t.me/masaldestekkanal",
                             ),
                             InlineKeyboardButton(
-                                text="🚑 Support",
-                                url=f"https://telegram.dog/{SUPPORT_CHAT}",
+                                text="🥀destek grubu🥀",
+                                url=f"https://t.me/kumsaldestek",
                             ),
                         ]
                     ]
@@ -689,7 +690,7 @@ def donate(update: Update, context: CallbackContext) -> None:
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "Bağış bilgilerini almak için önce benimle PM'den iletişime geçin."
             )
 
 
@@ -755,7 +756,7 @@ def main():
 
     else:
         LOGGER.info(
-            f"Neko started, Using long polling. | BOT: [@{NEKO_PTB.bot.username}]"
+            f"Merve robot aktif. | BOT: [@{NEKO_PTB.bot.username}]"
         )
         updater.start_polling(
             timeout=15,
