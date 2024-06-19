@@ -4,7 +4,7 @@ import os
 
 
 def get_user_list(config, key):
-    with open(f"{os.getcwd()}/NekoRobot/{config}", "r") as json_file:
+    with open(f"{os.getcwd()}/uyuyanprensesinkibot/{config}", "r") as json_file:
         return json.load(json_file)[key]
 
 
@@ -20,7 +20,7 @@ class Config(object):
     STRING_SESSION = "12345abc6"
     OWNER_ID = 1732814103  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "Awesome_Prince"
-    SUPPORT_CHAT = "Besties_XD"  # Your own group for support, do not add the @
+    SUPPORT_CHAT = "kumsaldestek"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
         -1001739802989
     )  # Prints any new group the bot is added to, prints just the name and ID.
@@ -38,7 +38,7 @@ class Config(object):
     INFOPIC = True
     URL = None
     SPAMWATCH_API = "P5_FWlwgUrpchwJceZDUSDxa41G396dn7J0vSEMWeBhHJ6C4q8VJLzjhfZPxNKUZ"  # go to support.spamwat.ch to get key
-    SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
+    SPAMWATCH_SUPPORT_CHAT = "@kumsaldestek"
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
@@ -85,7 +85,7 @@ import os
 
 
 def get_user_list(config, key):
-    with open(f"{os.getcwd()}/NekoRobot/{config}", "r") as json_file:
+    with open(f"{os.getcwd()}/uyuyanprensesinkibot/{config}", "r") as json_file:
         return json.load(json_file)[key]
 
 
@@ -100,7 +100,7 @@ class Config(object):
     TOKEN = ""  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 1732814103  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "Awesome_Prince"
-    SUPPORT_CHAT = "Besties_XD"  # Your own group for support, do not add the @
+    SUPPORT_CHAT = "@kumsaldestek"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
         -1001739802989
     )  # Prints any new group the bot is added to, prints just the name and ID.
@@ -117,7 +117,7 @@ class Config(object):
     INFOPIC = True
     URL = None
     SPAMWATCH_API = "P5_FWlwgUrpchwJceZDUSDxa41G396dn7J0vSEMWeBhHJ6C4q8VJLzjhfZPxNKUZ"  # go to support.spamwat.ch to get key
-    SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
+    SPAMWATCH_SUPPORT_CHAT = "@kumsaldestek"
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
